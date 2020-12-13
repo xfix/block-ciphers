@@ -5,7 +5,7 @@ name = "aes"
 version = "0.7.0-pre"
 dependencies = [
  "cfg-if",
- "cipher",
+ "cipher 0.3.0-pre (git+https://github.com/RustCrypto/traits?branch=cipher/v03_changes)",
  "cpuid-bool",
  "ctr",
  "opaque-debug",
@@ -18,12 +18,20 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fc52553543ecb104069b0ff9e0fcc5c739ad16202935528a112d974e8f1a4ee8"
 
 [[package]]
+name = "block-buffer"
+version = "0.10.0"
+source = "git+https://github.com/RustCrypto/utils?branch=block_utils#a6bef48bb604ce926efabd7f25394e6bed67ddef"
+dependencies = [
+ "generic-array",
+]
+
+[[package]]
 name = "block-modes"
 version = "0.8.0-pre"
 dependencies = [
  "aes",
  "block-padding",
- "cipher",
+ "cipher 0.3.0-pre (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
 ]
 
@@ -38,7 +46,7 @@ name = "blowfish"
 version = "0.8.0-pre"
 dependencies = [
  "byteorder",
- "cipher",
+ "cipher 0.3.0-pre (registry+https://github.com/rust-lang/crates.io-index)",
  "opaque-debug",
 ]
 
@@ -53,7 +61,7 @@ name = "cast5"
 version = "0.10.0-pre"
 dependencies = [
  "byteorder",
- "cipher",
+ "cipher 0.3.0-pre (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
  "opaque-debug",
 ]
@@ -75,6 +83,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "cipher"
+version = "0.3.0-pre"
+source = "git+https://github.com/RustCrypto/traits?branch=cipher/v03_changes#2b0f36e74ed83fb69777bf0d3a9befa6c9d43701"
+dependencies = [
+ "blobby",
+ "block-padding",
+ "generic-array",
+]
+
+[[package]]
 name = "cpuid-bool"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -83,10 +101,10 @@ checksum = "dcb25d077389e53838a8158c8e99174c5a9d902dee4904320db714f3c653ffba"
 [[package]]
 name = "ctr"
 version = "0.7.0-pre"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c24c08075706da56b6eebe30dc3af9a842802dadd1f169651a8defd69852a4e6"
+source = "git+https://github.com/RustCrypto/stream-ciphers?branch=cipher_v0.3#d3f823c269bc7bafcdf47f233e96a779681d2a0b"
 dependencies = [
- "cipher",
+ "block-buffer",
+ "cipher 0.3.0-pre (git+https://github.com/RustCrypto/traits?branch=cipher/v03_changes)",
 ]
 
 [[package]]
@@ -94,7 +112,7 @@ name = "des"
 version = "0.7.0-pre"
 dependencies = [
  "byteorder",
- "cipher",
+ "cipher 0.3.0-pre (registry+https://github.com/rust-lang/crates.io-index)",
  "opaque-debug",
 ]
 
@@ -113,7 +131,7 @@ name = "gost-modes"
 version = "0.5.0-pre"
 dependencies = [
  "block-modes",
- "cipher",
+ "cipher 0.3.0-pre (registry+https://github.com/rust-lang/crates.io-index)",
  "generic-array",
  "hex-literal",
  "kuznyechik",
@@ -143,7 +161,7 @@ dependencies = [
 name = "idea"
 version = "0.4.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.3.0-pre (registry+https://github.com/rust-lang/crates.io-index)",
  "opaque-debug",
 ]
 
@@ -151,7 +169,7 @@ dependencies = [
 name = "kuznyechik"
 version = "0.7.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.3.0-pre (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
  "opaque-debug",
 ]
@@ -160,7 +178,7 @@ dependencies = [
 name = "magma"
 version = "0.7.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.3.0-pre (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
  "opaque-debug",
 ]
@@ -181,7 +199,7 @@ checksum = "99c605b9a0adc77b7211c6b1f722dcb613d68d66859a44f3d485a6da332b0598"
 name = "rc2"
 version = "0.7.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.3.0-pre (registry+https://github.com/rust-lang/crates.io-index)",
  "opaque-debug",
 ]
 
@@ -190,7 +208,7 @@ name = "serpent"
 version = "0.4.0-pre"
 dependencies = [
  "byteorder",
- "cipher",
+ "cipher 0.3.0-pre (registry+https://github.com/rust-lang/crates.io-index)",
  "opaque-debug",
 ]
 
@@ -199,7 +217,7 @@ name = "sm4"
 version = "0.4.0-pre"
 dependencies = [
  "byteorder",
- "cipher",
+ "cipher 0.3.0-pre (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
  "opaque-debug",
 ]
@@ -208,7 +226,7 @@ dependencies = [
 name = "threefish"
 version = "0.4.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.3.0-pre (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -216,7 +234,7 @@ name = "twofish"
 version = "0.6.0-pre"
 dependencies = [
  "byteorder",
- "cipher",
+ "cipher 0.3.0-pre (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
  "opaque-debug",
 ]

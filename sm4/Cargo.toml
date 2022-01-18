@@ -1,7 +1,7 @@
 [package]
 name = "sm4"
-version = "0.4.0"
-authors = ["andelf <andelf@gmail.com>"]
+version = "0.5.0" # Also update html_root_url in lib.rs when bumping this
+authors = ["RustCrypto Developers"]
 license = "Apache-2.0 OR MIT"
 description = "SM4 block cipher algorithm"
 documentation = "https://docs.rs/sm4"
@@ -12,10 +12,8 @@ keywords = ["crypto", "sm4", "block-cipher"]
 categories = ["cryptography"]
 
 [dependencies]
-cipher = "0.3"
-byteorder = { version = "1", default-features = false }
-opaque-debug = "0.3"
+cipher = "0.4"
 
 [dev-dependencies]
-cipher = { version = "0.3", features = ["dev"] }
-hex-literal = "0.2"
+cipher = { version = "0.4", features = ["dev"] }
+hex-literal = "0.3"

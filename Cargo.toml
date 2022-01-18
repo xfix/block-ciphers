@@ -2,8 +2,6 @@
 members = [
     "aes",
     "blowfish",
-    "block-modes",
-    "gost-modes",
     "cast5",
     "des",
     "idea",
@@ -15,3 +13,10 @@ members = [
     "twofish",
     "threefish",
 ]
+
+[profile.dev]
+opt-level = 2
+
+[patch.crates-io]
+cipher = { git = "https://github.com/RustCrypto/traits/", branch = "cipher_v0.4" }
+inout = { git = "https://github.com/RustCrypto/utils", branch = "add_inout" }

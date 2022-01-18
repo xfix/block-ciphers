@@ -1,6 +1,6 @@
 [package]
 name = "blowfish"
-version = "0.8.0"
+version = "0.9.0" # Also update html_root_url in lib.rs when bumping this
 description = "Blowfish block cipher"
 authors = ["RustCrypto Developers"]
 license = "MIT OR Apache-2.0"
@@ -12,12 +12,11 @@ keywords = ["crypto", "blowfish", "block-cipher"]
 categories = ["cryptography", "no-std"]
 
 [dependencies]
-cipher = "0.3"
+cipher = "0.4"
 byteorder = { version = "1", default-features = false }
-opaque-debug = "0.3"
 
 [dev-dependencies]
-cipher = { version = "0.3", features = ["dev"] }
+cipher = { version = "0.4", features = ["dev"] }
 
 [features]
 bcrypt = []

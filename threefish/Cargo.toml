@@ -8,7 +8,8 @@ documentation = "https://docs.rs/threefish"
 readme = "README.md"
 edition = "2018"
 repository = "https://github.com/RustCrypto/block-ciphers"
-keywords = ["crypto", "threefish", "gost", "block-cipher"]
+keywords = ["crypto", "threefish", "block-cipher"]
+categories = ["cryptography", "no-std"]
 
 [dependencies]
 cipher = "0.4"
